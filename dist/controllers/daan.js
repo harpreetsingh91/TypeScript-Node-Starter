@@ -19,7 +19,9 @@ exports.getProductInfo = (req, res) => {
         getRecommendationForCharity(productInfoData.data.category, res);
     });
 };
+// just some deployment for heroku
 const getProductInformationHelper = (productID) => {
+    console.log("hello", keys.amazonKey.accessKeyId);
     const result = Amazon.getProduct(keys.amazonKey, "ca", productID);
     return result;
 };

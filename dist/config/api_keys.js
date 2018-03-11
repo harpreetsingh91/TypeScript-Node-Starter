@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.amazonKey = {
-    accessKeyId: "AKIAJSPIKRDS3TWYGHTQ",
-    secretAccessKey: "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",
+    accessKeyId: "AKIAIGEF2E7IKY5TDL4A",
+    secretAccessKey: "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",
     associateTag: "harpreetvic-20",
     locale: "webservices.amazon.ca"
 };
