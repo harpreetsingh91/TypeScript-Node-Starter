@@ -35,11 +35,11 @@ const getRecommendationForCharity = (productCategory: string, res: Response) => 
   const charityFileName = causesToCharityMapping[cause][0];
 
   // CharityInfo = Uphold_Human_Rights_Fund.name;
-  loadJsonFile("causes_data/" + charityFileName).then(x => {
+  loadJsonFile("causes_data/" + charityFileName).then((x: any) => {
     res.send(x);
     });
   }
-  else loadJsonFile("causes_data/Uphold_Human_Rights_Fund.json").then(returnADefaultValue => {
+  else loadJsonFile("causes_data/Uphold_Human_Rights_Fund.json").then((returnADefaultValue: any) => {
     res.send(returnADefaultValue);
     });
 };
