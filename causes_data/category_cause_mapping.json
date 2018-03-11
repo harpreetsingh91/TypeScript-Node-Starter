@@ -1,6 +1,6 @@
 {
-  "Electronics": ["Human Life", "Environmental"],
-  "Food": ["Human Life", "Environmental"],
+  "Electronics": ["Environmental", "Human Life"],
+  "Food": ["Environmental", "Human Life"],
   "Tools & Home Improvement": ["Environmental"],
   "Office Product": ["Educational"]
 }
