@@ -16,13 +16,16 @@ const categoryToCauseMapping = require("../../causes_data/category_cause_mapping
 export let getProductInfo = (req: Request, res: Response) => {
     // res.send(JSON.stringify({ a: "Hello world" }));
     getProductInformationHelper(req.param("id")).then((productInfoData: any) => {
-      // res.send(data.data);
+      if (productInfoData.data == undefined || productInfoData.data.category == undefined) {
+        loadJsonFile("causes_data/Uphold_Human_Rights_Fund.json").then((returnADefaultValue: any) => {
+          res.send(returnADefaultValue);
+          });
+      }
       getRecommendationForCharity(productInfoData.data.category, res);
     });
   };
 // just some deployment for heroku
 const getProductInformationHelper = (productID: string): any => {
-  console.log("hello", keys.amazonKey.accessKeyId);
     const result = Amazon.getProduct(keys.amazonKey, "ca", productID);
     return result;
 };
