@@ -23,6 +23,7 @@ import * as homeController from "./controllers/home";
 import * as userController from "./controllers/user";
 import * as apiController from "./controllers/api";
 import * as contactController from "./controllers/contact";
+import * as daanApiController from "./controllers/daan";
 
 
 // API keys and Passport configuration
@@ -121,5 +122,10 @@ app.get("/auth/facebook", passport.authenticate("facebook", { scope: ["email", "
 app.get("/auth/facebook/callback", passport.authenticate("facebook", { failureRedirect: "/login" }), (req, res) => {
   res.redirect(req.session.returnTo || "/");
 });
+
+/**
+ * Daan API routes
+ */
+ app.get("/daan", daanApiController.getProductInfo);
 
 export default app;
