@@ -11,13 +11,11 @@
         "paths": {
             "*": [
                 "node_modules/*",
-                "src/types/*",
-                "causes_data/*"
+                "src/types/*"
             ]
         }
     },
     "include": [
-        "src/**/*",
-        "causes_data/Uphold_Human_Rights_Fund.json"
+        "src/**/*"
     ]
 }
