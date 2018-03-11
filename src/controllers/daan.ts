@@ -22,6 +22,7 @@ export let getProductInfo = (req: Request, res: Response) => {
   };
 // just some deployment for heroku
 const getProductInformationHelper = (productID: string): any => {
+  console.log(keys.amazonKey.accessKeyId);
     const result = Amazon.getProduct(keys.amazonKey, "ca", productID);
     return result;
 };
