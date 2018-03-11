@@ -7,7 +7,7 @@ import { Response, Request, NextFunction } from "express";
 import { ProductInfo } from "../classes/productInfo";
 import * as Amazon from "@mcrowe/amazon-product-api";
 
-import * as keys from "../config/api_keys";
+// import * as keys from "../config/api_keys"; for Heroku
 
 const loadJsonFile = require("load-json-file");
 
