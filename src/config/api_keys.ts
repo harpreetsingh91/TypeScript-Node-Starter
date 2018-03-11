@@ -1,6 +1,6 @@
-export const amazonKey = {
-    accessKeyId: "AKIAJSPIKRDS3TWYGHTQ",
-    secretAccessKey: "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",
+  export const amazonKey = {
+    accessKeyId: process.env.awsAccessKey,
+    secretAccessKey: process.env.awsSecret,
     associateTag: "harpreetvic-20",
     locale: "webservices.amazon.ca"
   };
